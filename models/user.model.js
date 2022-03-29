@@ -6,7 +6,7 @@ const User = db.define('user', {
     id: {
         primaryKey: true,
         autoIncrement: true,
-        type: DataTypes.INTEGER(),
+        type: DataTypes.INTEGER,
         allowNull: false
     },
     username: {
@@ -24,12 +24,14 @@ const User = db.define('user', {
     },
     status: {
         type: DataTypes.STRING(11),
-        allowNull: false
+        allowNull: false,
+        defaultValue: "active"
         //activo suspendido
     },
     roles: {
         type: DataTypes.STRING(11),
-        allowNull: false
+        allowNull: false,
+        defaultValue: "guest"
         // admin visitante
     }
 

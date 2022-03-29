@@ -6,11 +6,11 @@ const Movie = db.define('movie', {
     id: {
         primaryKey: true,
         autoIncrement: true,
-        type: DataTypes.INTEGER(),
+        type: DataTypes.INTEGER,
         allowNull: false
     },
     title: {
-        type: DataTypes.STRING(150),
+        type: DataTypes.STRING(100),
         allowNull: false
     },
     description: {
@@ -18,24 +18,26 @@ const Movie = db.define('movie', {
         allowNull: false
     },
     duration: {
-        type: DataTypes.STRING(10),
+        type: DataTypes.INTEGER,
         allowNull: false
     },
     rating: {
-        type: DataTypes.STRING(11),
-        allowNull: false
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        defaultValue: 1
     },
     img: {
-        type: DataTypes.STRING(),
+        type: DataTypes.STRING(255),
         allowNull: false
     },
     genre: {
-        type: DataTypes.STRING(20),
+        type: DataTypes.STRING(50),
         allowNull: false
     },
     status: {
         type: DataTypes.STRING(11),
-        allowNull: false
+        allowNull: false,
+        defaultValue: "active"
     },
 
 

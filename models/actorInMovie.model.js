@@ -1,24 +1,24 @@
-const { db } = require('../utils/database')
 const { DataTypes } = require('sequelize')
+const { db } = require('../utils/database')
 
 
-const ActorInMovies = db.define('ActorInMovies', {
+const ActorInMovie = db.define('actorInMovie', {
     id: {
         primaryKey: true,
         autoIncrement: true,
-        type: DataTypes.INTEGER(),
+        type: DataTypes.INTEGER,
         allowNull: false
     },
     actorId: {
-        type: DataTypes.INTEGER(),
+        type: DataTypes.INTEGER,
         allowNull: false
     },
     movieId: {
-        type: DataTypes.INTEGER(),
+        type: DataTypes.INTEGER,
         allowNull: false
     },
 
 
 }, { timestamps: false })
 
-module.exports = { ActorInMovies }
+module.exports = { ActorInMovie }

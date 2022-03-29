@@ -18,23 +18,24 @@ const Review = db.define('Review', {
         allowNull: false
     },
     rating: {
-        type: DataTypes.STRING(10),
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        defaultValue: 1
+    },
+    userId: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+    },
+    movieId: {
+        type: DataTypes.INTEGER,
         allowNull: false
     },
     status: {
         type: DataTypes.STRING(11),
-        allowNull: false
-    },
-    userId: {
-        type: DataTypes.INTEGER(),
-        allowNull: false
-    },
-    movieId: {
-        type: DataTypes.INTEGER(),
-        allowNull: false
-    },
+        allowNull: false,
+        defaultValue: "active"
 
-
+    }
 
 
 }, { timestamps: false })

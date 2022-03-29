@@ -10,8 +10,7 @@ initModels()
 db.sync().then(() => {
     console.log("database corriendo")
 
-})
-    .catch((error) => console.log(error))
+}).catch((error) => console.log(error))
 
 
 app.listen(4000, () => {
